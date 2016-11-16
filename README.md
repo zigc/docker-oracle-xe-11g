@@ -20,7 +20,7 @@ Run this, if you want the database to be connected remotely:
 docker run -d -p 49160:22 -p 49161:1521 -e ORACLE_ALLOW_REMOTE=true zigac/docker-oracle-xe-11g
 ```
 
-Connect database with following setting:
+### Connect database with following setting:
 ```
 hostname: localhost
 port: 49161
