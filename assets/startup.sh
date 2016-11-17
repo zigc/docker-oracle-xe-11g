@@ -20,6 +20,7 @@ if [ "$ORACLE_ALLOW_REMOTE" = true ]; then
 fi
 
 cd /docker-entrypoint-initdb.d ;
+chmod +x *.sh ;
 for f in /docker-entrypoint-initdb.d/*; do
   case "$f" in
     "/docker-entrypoint-initdb.d/init_docker_db.sh")    echo "$0: running $f"; echo "exit" | sh $f; echo ;;
