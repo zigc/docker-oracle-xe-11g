@@ -1,4 +1,4 @@
-docker-docker-oracle-xe-11g
+docker-oracle-xe-11g
 ============================
 
 Oracle Express Edition 11g Release 2 on Ubuntu 16.04 LTS
