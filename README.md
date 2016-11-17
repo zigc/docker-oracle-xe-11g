@@ -12,18 +12,18 @@ docker pull zigac/docker-oracle-xe-11g
 
 Run with 22 and 1521 ports opened:
 ```
-docker run -d -p 49160:22 -p 49161:1521 zigac/docker-oracle-xe-11g
+docker run -d -p 49022:22 -p 49521:1521 zigac/docker-oracle-xe-11g
 ```
 
 Run this, if you want the database to be connected remotely:
 ```
-docker run -d -p 49160:22 -p 49161:1521 -e ORACLE_ALLOW_REMOTE=true zigac/docker-oracle-xe-11g
+docker run -d -p 49022:22 -p 49521:1521 -e ORACLE_ALLOW_REMOTE=true zigac/docker-oracle-xe-11g
 ```
 
 ### Connect database with following setting:
 ```
 hostname: localhost
-port: 49161
+port: 49521
 sid: xe
 username: system
 password: oracle
@@ -36,7 +36,7 @@ oracle
 
 Login by SSH
 ```
-ssh root@localhost -p 49160
+ssh root@localhost -p 49022
 password: admin
 ```
 
