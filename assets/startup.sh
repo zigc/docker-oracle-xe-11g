@@ -23,7 +23,7 @@ cd /docker-entrypoint-initdb.d ;
 chmod u+x **/*.sh ;
 for f in /docker-entrypoint-initdb.d/*; do
   case "$f" in
-    "/docker-entrypoint-initdb.d/init_docker_db.sh")    echo "$0: running $f"; echo "exit" | sh $f; echo ;;
+    "/docker-entrypoint-initdb.d/init_docker_db.sh")    echo "$0: running $f"; . "$f" ;;
     *)        echo "$0: ignoring $f" ;;
   esac
   echo
